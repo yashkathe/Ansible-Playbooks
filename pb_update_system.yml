@@ -6,4 +6,4 @@
     
   - name: update repository index
     apt:
-      update_cache=: yes
+      update_cache: yes

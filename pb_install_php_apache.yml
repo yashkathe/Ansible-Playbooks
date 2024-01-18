@@ -41,7 +41,7 @@
       state: latest
     when: ansible_distribution == "CentOS"
 
-  - name: start httpd (Ubuntu)
+  - name: start httpd (CENTOS)
     tags: apache,ubuntu,httpd
     service:
       name: httpd

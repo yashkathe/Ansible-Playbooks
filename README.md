@@ -1,5 +1,7 @@
 # Ansible Repository
 
+Link to [Notes](_Notes.pdf)
+
 ## File Name
 
 1. **inverntory** - contains IPs of all hosts

@@ -1,0 +1,10 @@
+- name: Run Multiple Commands and store them in a register
+  shell: |
+    hostname
+    hostname -I
+    uname
+  register: command_output
+
+- name: Display Command output
+  debug:
+    var: command_output.stdout_lines

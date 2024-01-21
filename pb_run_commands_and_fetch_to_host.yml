@@ -1,0 +1,27 @@
+---
+# run commands to fetch information from remote server
+
+- name: Run Commands and Fetch Information
+  hosts: all
+    - name: Run Command 1
+  tasks:
+      ansible.builtin.shell: |
+        your_command_1
+      register: result_1
+      become: yes
+
+    - name: Run Command 2
+      ansible.builtin.shell: |
+        your_command_2
+      register: result_2
+      become: yes
+
+    - name: Save Results to Files
+      ansible.builtin.copy:
+        content: |
+          Command 1 Output:
+          {{ result_1.stdout }}
+
+          Command 2 Output:
+          {{ result_2.stdout }}
+        dest: "/local/path/to/save/results.txt"
